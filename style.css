@@ -1,0 +1,135 @@
+body {
+    min-height: 2000px;
+
+    background-image: url("img/full-bloom.png");
+
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+
+
+}
+
+h2 {
+    color: white;
+}
+
+.white-text {
+    color: white;
+}
+
+.black-text {
+    color: black;
+}
+
+.jumbotron {
+    padding-top: 5rem;
+    background-image: url("img/round.png");
+
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+
+
+}
+
+#about {
+    background-color: #0d6efd;
+}
+
+
+
+#contact {
+    background-color: #3f3697;
+}
+
+#footer-bx {
+    background-color: #0d6efd !important;
+}
+
+section {
+    padding-top: 5rem;
+}
+
+.bg-primary {
+    background: transparent !important;
+    transition: 0.75s ease;
+}
+
+.bg-primary.scrolled {
+    background: #0d6efd !important;
+}
+
+.navbar-light a {
+    color: black !important;
+    transition: 1s ease;
+}
+
+.navbar-light.scrolled a {
+    color: white !important;
+}
+
+.asbx {
+    text-decoration: none;
+    transition: 1s ease;
+
+}
+
+.asbx:hover {
+    color: red !important;
+    transition: 1s ease;
+}
+
+.parallax {
+    padding-top: 5rem;
+    background-image: url("img/full-bloom.png");
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.card {
+    background-color: #344fa1;
+}
+
+.card .card-text {
+    color: white;
+}
+
+/* navbar */
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+    transition: all .5s;
+}
+
+nav ul li a:hover {
+    color: #0d6efd;
+}
+
+nav.stroke ul li a {
+    position: relative;
+}
+
+nav.stroke ul li a:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '.';
+    color: transparent;
+    background: #aaa;
+    height: 1px;
+}
+
+nav.stroke ul li a:hover:after {
+    width: 100%;
+}
+
+
+/* end nav bar */
