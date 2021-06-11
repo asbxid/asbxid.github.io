@@ -91,6 +91,11 @@ section {
     background-position: center;
 }
 
+.card iframe {
+    height: 240px;
+
+}
+
 .card {
     background-color: #344fa1;
 }
@@ -133,3 +138,28 @@ nav.stroke ul li a:hover:after {
 
 
 /* end nav bar */
+
+.lead {
+    padding: 0 10px;
+    margin: 0;
+}
+
+.lead .univ {
+    padding: 0;
+    margin: 0;
+}
+
+p.ex2 {
+    display: inline-block;
+}
+
+@media screen and (max-width:680px) {
+
+    p.ex2 {
+        display: block;
+    }
+
+    p.garis {
+        display: none;
+    }
+}
