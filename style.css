@@ -1,5 +1,4 @@
 body {
-    min-height: 2000px;
 
     background-image: url("img/full-bloom.png");
 
@@ -24,6 +23,8 @@ h2 {
 }
 
 .jumbotron {
+    position: relative;
+    height: 580px;
     padding-top: 5rem;
     background-image: url("img/round.png");
 
@@ -31,27 +32,43 @@ h2 {
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
-
-
 }
 
-#about {
+.jumbotron .container {
+    animation: animate 4s ease-in-out infinite;
+}
+
+section#about {
+    padding-top: 4rem;
+    position: relative;
     background-color: #0d6efd;
 }
 
+section#about svg {
+    margin-bottom: 0;
+}
 
+section#projects {
+    padding-top: 4rem;
+}
 
-#contact {
+section#contact {
+    position: relative;
+    padding-top: 4rem;
+    padding-bottom: 7rem;
     background-color: #3f3697;
 }
 
 #footer-bx {
     background-color: #0d6efd !important;
+    padding-top: 2rem;
+
 }
 
-section {
-    padding-top: 5rem;
+footer p {
+    animation: animate 4s ease-in-out infinite;
 }
+
 
 .bg-primary {
     background: transparent !important;
@@ -98,6 +115,12 @@ section {
 
 .card {
     background-color: #344fa1;
+
+}
+
+.anim {
+    animation: animate 4s ease-in-out infinite;
+    animation-delay: calc(var(--i) * 0.25s);
 }
 
 .card .card-text {
@@ -151,9 +174,106 @@ nav.stroke ul li a:hover:after {
 
 p.ex2 {
     display: inline-block;
+    z-index: 0;
 }
 
-@media screen and (max-width:680px) {
+
+.wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(img/waveblue.png);
+    background-size: 1000px 100px;
+    animation: animate 4s ease-in-out infinite;
+    animation-delay: calc(var(--i) * 0.25s);
+}
+
+.wave#wave1 {
+    z-index: 1000;
+    opacity: 1;
+    background-position-x: 400px;
+
+}
+
+.wave#wave2 {
+    z-index: 999;
+    opacity: 0.5;
+    background-position-x: 300px;
+
+}
+
+.wave#wave3 {
+    z-index: 998;
+    opacity: 0.2;
+    background-position-x: 200px;
+
+}
+
+.wave#wave4 {
+    z-index: 999;
+    opacity: 0.7;
+    background-position-x: 100px;
+
+}
+
+.wavebtm {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(img/waveblue.png);
+    background-size: 1000px 100px;
+    animation: animate 4s ease-in-out infinite;
+    animation-delay: calc(var(--i) * 0.25s);
+
+}
+
+.wavebtm#wavebtm1 {
+    z-index: 1000;
+    opacity: 1;
+    background-position-x: 400px;
+
+}
+
+.wavebtm#wavebtm2 {
+    z-index: 999;
+    opacity: 0.3;
+    background-position-x: 300px;
+
+}
+
+.wavebtm#wavebtm3 {
+    z-index: 998;
+    opacity: 0.1;
+    background-position-x: 200px;
+
+}
+
+.wavebtm#wavebtm4 {
+    z-index: 999;
+    opacity: 0.5;
+    background-position-x: 100px;
+
+}
+
+@keyframes animate {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+
+
+}
+
+@media screen and (max-width:770px) {
 
     p.ex2 {
         display: block;
