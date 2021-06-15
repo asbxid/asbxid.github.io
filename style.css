@@ -1,19 +1,27 @@
 body {
-
     background-image: url("img/full-bloom.png");
-
-
-    /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
-
-
 }
 
-h2 {
-    color: white;
+::-webkit-scrollbar {
+    width: 8px;
 }
 
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(transparent, #0d6efd);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: linear-gradient(#0d6efd, transparent, #0d6efd);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(transparent, #344fa1);
+}
+
+h2,
 .white-text {
     color: white;
 }
@@ -27,9 +35,6 @@ h2 {
     height: 580px;
     padding-top: 5rem;
     background-image: url("img/round.png");
-
-
-    /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
 }
@@ -62,13 +67,11 @@ section#contact {
 #footer-bx {
     background-color: #0d6efd !important;
     padding-top: 2rem;
-
 }
 
 footer p {
     animation: animate 4s ease-in-out infinite;
 }
-
 
 .bg-primary {
     background: transparent !important;
@@ -91,7 +94,6 @@ footer p {
 .asbx {
     text-decoration: none;
     transition: 1s ease;
-
 }
 
 .asbx:hover {
@@ -102,29 +104,25 @@ footer p {
 .parallax {
     padding-top: 5rem;
     background-image: url("img/full-bloom.png");
-
-    /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
 }
 
-.card iframe {
-    height: 240px;
-
-}
-
 .card {
     background-color: #344fa1;
+}
 
+.card iframe {
+    height: 240px;
+}
+
+.card .card-text {
+    color: white;
 }
 
 .anim {
     animation: animate 4s ease-in-out infinite;
     animation-delay: calc(var(--i) * 0.25s);
-}
-
-.card .card-text {
-    color: white;
 }
 
 /* navbar */
@@ -159,7 +157,6 @@ nav.stroke ul li a:hover:after {
     width: 100%;
 }
 
-
 /* end nav bar */
 
 .lead {
@@ -177,47 +174,7 @@ p.ex2 {
     z-index: 0;
 }
 
-
-.wave {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100px;
-    background: url(img/waveblue.png);
-    background-size: 1000px 100px;
-    animation: animate 4s ease-in-out infinite;
-    animation-delay: calc(var(--i) * 0.25s);
-}
-
-.wave#wave1 {
-    z-index: 1000;
-    opacity: 1;
-    background-position-x: 400px;
-
-}
-
-.wave#wave2 {
-    z-index: 999;
-    opacity: 0.5;
-    background-position-x: 300px;
-
-}
-
-.wave#wave3 {
-    z-index: 998;
-    opacity: 0.2;
-    background-position-x: 200px;
-
-}
-
-.wave#wave4 {
-    z-index: 999;
-    opacity: 0.7;
-    background-position-x: 100px;
-
-}
-
+.wave,
 .wavebtm {
     position: absolute;
     bottom: 0;
@@ -228,35 +185,34 @@ p.ex2 {
     background-size: 1000px 100px;
     animation: animate 4s ease-in-out infinite;
     animation-delay: calc(var(--i) * 0.25s);
-
 }
 
+.wave#wave1,
 .wavebtm#wavebtm1 {
     z-index: 1000;
     opacity: 1;
     background-position-x: 400px;
-
 }
 
+.wave#wave2,
 .wavebtm#wavebtm2 {
     z-index: 999;
-    opacity: 0.3;
+    opacity: 0.5;
     background-position-x: 300px;
-
 }
 
+.wave#wave3,
 .wavebtm#wavebtm3 {
     z-index: 998;
-    opacity: 0.1;
+    opacity: 0.2;
     background-position-x: 200px;
-
 }
 
+.wave#wave4,
 .wavebtm#wavebtm4 {
     z-index: 999;
-    opacity: 0.5;
+    opacity: 0.7;
     background-position-x: 100px;
-
 }
 
 @keyframes animate {
@@ -269,12 +225,9 @@ p.ex2 {
     50% {
         transform: translateY(10px);
     }
-
-
 }
 
 @media screen and (max-width:770px) {
-
     p.ex2 {
         display: block;
     }
