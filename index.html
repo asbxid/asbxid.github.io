@@ -5,17 +5,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="img/logo.png">
-
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="style.css">
     <!-- icons Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-
     <title>Portofolio ASBX</title>
   </head>
   <body>
+
 <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-primary fixed-top stroke">
         <div class="container" >
@@ -76,8 +75,6 @@
             </div>
         </div>
     </div>
-
-
 </section>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0d6efd" fill-opacity="1" d="M0,32L18.5,58.7C36.9,85,74,139,111,160C147.7,181,185,171,222,192C258.5,213,295,267,332,261.3C369.2,256,406,192,443,149.3C480,107,517,85,554,112C590.8,139,628,213,665,229.3C701.5,245,738,203,775,197.3C812.3,192,849,224,886,213.3C923.1,203,960,149,997,154.7C1033.8,160,1071,224,1108,234.7C1144.6,245,1182,203,1218,208C1255.4,213,1292,267,1329,256C1366.2,245,1403,171,1422,133.3L1440,96L1440,0L1421.5,0C1403.1,0,1366,0,1329,0C1292.3,0,1255,0,1218,0C1181.5,0,1145,0,1108,0C1070.8,0,1034,0,997,0C960,0,923,0,886,0C849.2,0,812,0,775,0C738.5,0,702,0,665,0C627.7,0,591,0,554,0C516.9,0,480,0,443,0C406.2,0,369,0,332,0C295.4,0,258,0,222,0C184.6,0,148,0,111,0C73.8,0,37,0,18,0L0,0Z"></path></svg>
 <!-- end about -->
@@ -131,12 +128,10 @@
         </div>
       </div>
     </div>
-
   </div>
 </div>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#3f3697" fill-opacity="1" d="M0,32L26.7,69.3C53.3,107,107,181,160,218.7C213.3,256,267,256,320,261.3C373.3,267,427,277,480,288C533.3,299,587,309,640,288C693.3,267,747,213,800,208C853.3,203,907,245,960,234.7C1013.3,224,1067,160,1120,117.3C1173.3,75,1227,53,1280,58.7C1333.3,64,1387,96,1413,112L1440,128L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z"></path></svg>
 </section>
-
 <!-- End Projects -->
 
 <!-- contact -->
@@ -171,7 +166,6 @@
 <div class="wavebtm" id="wavebtm2" style="--i:2"></div>
 <div class="wavebtm" id="wavebtm3" style="--i:3"></div>
 <div class="wavebtm" id="wavebtm4" style="--i:4"></div>
-
 </section>
 <!-- end contact -->
 
@@ -180,11 +174,13 @@
 <p>Created with <i class="bi bi-heart-fill text-danger"></i> By <a class="text-white fw-bold asbx" target="_blank"href="https://www.instagram.com/asbx_id">ASBX ID</a></p>
 </footer>
 <!-- end footer -->
+<div class="loader-wrapper">
+  <span class="loader"><span class="loader-inner"></span></span>
+</div>
 <!-- script -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       const projectImage = document.querySelectorAll('.project-img');
-      
       projectImage.forEach((img, i) => {
         img.dataset.aos = 'fade-down';
         img.dataset.aosDelay = i * 100;
@@ -198,17 +194,14 @@
       let wave2 = document.getElementById('wave2');
       let wave3 = document.getElementById('wave3');
       let wave4 = document.getElementById('wave4');
-
       window.addEventListener('scroll', function(){
         let value = window.scrollY;
-
         image.style.backgroundPositionX = value + 'px';
         wave1.style.backgroundPositionX = 400 + value * 4 + 'px';
         wave2.style.backgroundPositionX = 300 + value * -4 + 'px';
         wave3.style.backgroundPositionX = 200 + value * 2 + 'px';
         wave4.style.backgroundPositionX = 100 + value * -2 + 'px';
-      })
-
+      });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
     <script type="text/javascript" src="jquery.js"></script>
@@ -217,6 +210,10 @@
         var bxScroll = $(this).scrollTop();
         $('nav').toggleClass('scrolled',bxScroll > 200);
         $('nav').toggleClass('shadow',bxScroll > 200);
+      });
+
+        $(window).on("load",function(){
+        $(".loader-wrapper").fadeOut("slow");
       });
     </script>
   </body>
